@@ -1,0 +1,36 @@
+{
+  "name": "scuttlelog",
+  "version": "0.0.0",
+  "description": "scuttlebutt as a log",
+  "main": "index.js",
+  "dependencies": {
+    "duplexify": "^3.1.0",
+    "cuid": "^1.2.4",
+    "ldjson-stream": "^1.1.0",
+    "once": "^1.3.0"
+  },
+  "devDependencies": {
+    "tape": "^2.14.0"
+  },
+  "scripts": {
+    "test": "tape test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mafintosh/scuttlelog"
+  },
+  "keywords": [
+    "scuttlebutt",
+    "p2p",
+    "log",
+    "change",
+    "feed",
+    "changes"
+  ],
+  "author": "Mathias Buus",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mafintosh/scuttlelog/issues"
+  },
+  "homepage": "https://github.com/mafintosh/scuttlelog"
+}
