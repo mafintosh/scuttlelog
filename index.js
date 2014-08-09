@@ -63,11 +63,21 @@ Log.prototype._addStream = function(pair) {
   return pair.stream
 }
 
-Log.prototype.createReadStream = function() {
+Log.prototype.createReadStream = function(opts) {
+  if (!opts) opts = {}
+
   var self = this
   var serialize = ldjson.serialize()
+  var live = opts.live !== false
 
-  for (var i = 0; i < this.changes.length; i++) serialize.write(this.changes[i])
+  if (!opts.tail) {
+    for (var i = 0; i < this.changes.length; i++) serialize.write(this.changes[i])
+  }
+
+  if (!live) {
+    serialize.end()
+    return duplexify(null, serialize)
+  }
 
   return this._addStream({
     stream: duplexify(null, serialize),
