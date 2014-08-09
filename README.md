@@ -6,6 +6,8 @@ The replication log from [scuttlebutt](https://github.com/dominictarr/scuttlebut
 npm install scuttlelog
 ```
 
+[![build status](http://img.shields.io/travis/mafintosh/scuttlelog.svg?style=flat)](http://travis-ci.org/mafintosh/scuttlelog)
+
 ## Usage
 
 Use this to implement your own scuttlebutt like data structure with a custom changes feed
