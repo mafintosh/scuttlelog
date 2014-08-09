@@ -1,6 +1,6 @@
 # scuttlelog
 
-The replication log from scuttlebutt but as a seperate module
+The replication log from [scuttlebutt](https://github.com/dominictarr/scuttlebutt) but as a seperate module
 
 ```
 npm install scuttlelog
